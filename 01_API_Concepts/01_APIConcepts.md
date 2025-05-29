@@ -93,3 +93,60 @@ https://www.example.com:8080/products/search?q=phone#reviews
 | `#reviews`        | Fragment (Anchor)  | Points to a section within the page (not sent to the server)               |
 
 # Understanding of REST API
+
+REST stands for Representational State Transfer.
+
+It is an **architecture style for designing web APIs** like rules for how software should talk to each other over the internet.
+
+* REST APIs use URLs to access data.
+* REST APIs use HTTP methods (GET, POST, etc.)
+* REST APIs use JSON format to send/receive data.
+
+**1. Endpoint**
+
+An endpoint is a specific URL used to access something. Like a door to a resource.
+
+Example Endpoints:
+```
+/movies/ → All movies
+/movies/123/ → Movie with ID 123
+```
+
+**2. HTTP Methods (CRUD)**
+
+| Method | Action  | Meaning              | Example                                     |
+|--------|---------|----------------------|---------------------------------------------|
+| GET    | Read    | Get data             | `/movies/` → get all movies                 |
+| POST   | Create  | Send new data        | `/movies/` + new movie JSON                 |
+| PUT    | Update  | Replace existing data| `/movies/123/` + updated movie data         |
+| DELETE | Delete  | Remove data          | `/movies/123/` → delete movie               |
+
+**3. Headers**
+
+Headers are like ID cards sent with a request.
+They tell the server extra information.
+```
+Content-Type: application/json
+Authorization: Bearer your-token
+```
+
+**4. Data / Body**
+
+When you send data (POST or PUT), it goes in the body. Format is usually JSON.
+```
+{
+  "title": "Inception",
+  "year": 2010,
+  "rating": 8.8
+}
+```
+
+**Understand url below**
+```
+https://www.api.movielist.com/movies/ 
+```
+return complete list and we can perform GET and POST
+```
+https://www.api.movielist.com/movies/123/ 
+```
+return or connect to individual item and perform GET, PUT, DELETE
