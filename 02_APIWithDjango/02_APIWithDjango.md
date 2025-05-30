@@ -324,3 +324,178 @@ admin.site.register(Movie)
 
 
 ```
+
+### **What is a View in Django**
+
+A view is a Python function or class that takes a web request and returns a web response. It contains the logic that determines what data gets displayed and how.
+
+There are two types of views in Django:
+- 1. Function-Based Views (FBV) – use plain functions
+- 2. Class-Based Views (CBV) – use classes to encapsulate logic
+
+Below example retuen JSON response of all elements. Means all the items/objects from movie object irrespective of number.
+```
+from django.shortcuts import render
+from .models import Movie
+from django.http import JsonResponse
+
+# Create your views here. : Function based view
+def movie_list(request):
+    movies = Movie.objects.all()
+    data = {'movies': list(movies.values())}
+    print(movies.values())
+
+    return JsonResponse(data)  # {"movies": [{"id": 1, "name": "Movie1", "description": "Description-1", "active": true},
+                               # {"id": 2, "name": "movie2", "description": "Description-2", "active": false}]}
+```
+
+Now return specific element or individual element from the movie model
+```
+from django.shortcuts import render
+from .models import Movie
+from django.http import JsonResponse
+
+def movie_detals(request, pk):
+    movies = Movie.objects.get(pk=pk)
+    data = {
+        'name': movies.name,
+        'description': movies.description,
+        'active': movies.active
+    }
+
+    return JsonResponse(data) #{"name": "Movie1", "description": "Description-1", "active": true}
+
+app>urls.py
+
+...
+from django.urls import path, include
+from .views import movie_list, movie_detals
+
+urlpatterns = [
+    path('list/', movie_list, name="movie-list"),
+    path('<int:pk>', movie_detals, name="movie_detals"),
+]
+
+```
+
+**What is a QuerySet?**
+
+A QuerySet is a collection of objects from the database.
+```
+Movie.objects.all()
+```
+
+Example: Complex QuerySet
+```
+class Movie(models.Model):
+    title = models.CharField(max_length=100)
+    year = models.IntegerField()
+    rating = models.FloatField()
+    genre = models.CharField(max_length=50)
+```
+
+* Filter movies released after 2010 and genre is 'Action':
+```
+Movie.objects.filter(year__gt=2010, genre='Action')
+```
+
+* Order by rating (highest first):
+```
+Movie.objects.filter(genre='Action').order_by('-rating')
+```
+
+* Get only selected fields (like title and year):
+```
+Movie.objects.filter(genre='Comedy').values('title', 'year')
+```
+
+* Exclude some results:
+```
+Movie.objects.exclude(rating__lt=5.0)
+```
+
+* Combine filters using Q (OR condition):
+```
+from django.db.models import Q
+
+Movie.objects.filter(Q(genre='Horror') | Q(rating__gte=8))
+```
+
+**What is .values() in Django**
+
+.values() is a QuerySet method that returns dictionaries instead of full Django model objects.
+
+```
+<!-- Input : without value() -->
+movies = Movie.objects.all()
+
+<!-- Output -->
+[<Movie: Inception>, <Movie: Interstellar>, ...]
+```
+
+```
+<!-- with .value() -->
+movies = Movie.objects.all().values()
+
+<!-- output -->
+[
+  {'id': 1, 'title': 'Inception', 'year': 2010, 'rating': 8.8},
+  {'id': 2, 'title': 'Interstellar', 'year': 2014, 'rating': 8.6},
+]
+```
+
+.values() = "Give me plain data (dictionary), not full model objects."
+
+### **urls.py in both the project and app**
+
+When someone visits your website, Django needs to know, “Where should I send this request?” This is where urls.py files come in.
+
+Django Has Two Kinds of urls.py
+* Project-level urls.py : Located in the main project folder (same as settings.py).
+* App-level urls.py : You create this inside each app folder (optional but very useful).
+
+(Project = House, App = Rooms)
+```
+myproject/
+│
+├── myproject/         ← Project folder
+│   ├── urls.py        ← Project-level URL file
+│   └── settings.py
+│
+├── movies/            ← App folder
+│   └── urls.py        ← App-level URL file (you create this)
+│   └── views.py
+```
+
+1. Project-level urls.py – the Main Gate
+This file connects the whole site to the right app.
+```
+# myproject/urls.py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),              # Admin panel
+    path('movies/', include('movies.urls')),      # Redirect /movies/ to the movies app
+]
+```
+If someone comes to /movies/, send them to the movies app’s url board.
+
+imp : include('movies.urls'): content should be inside quotes.
+
+2. App-level urls.py – the Room Directory
+This file connects the movie app's URLs to its views.
+```
+# movies/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.movie_list),  # When user visits /movies/, show movie list
+]
+```
+When user reaches the movies room, check what’s inside: Oh! Show the movie list.
+
+```
+Browser → Project urls.py → App urls.py → views.py → Output to browser
+```
