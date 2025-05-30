@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+*.log
+
+# VSCode / PyCharm / Editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migrations (optional – keep if you want to recreate)
+*/migrations/__pycache__/
+*/migrations/*.pyc
+# Uncomment the next line if you want to ignore all migration files
+# */migrations/*.py
+
+# Environment variables
+.env
+.env.*
+
+# Testing
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+
+# Node (if using npm for frontend assets)
+node_modules/
+
+# Git
+.git/
