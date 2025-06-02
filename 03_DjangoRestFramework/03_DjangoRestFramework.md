@@ -89,7 +89,6 @@ myapp/
 ```
 
 Reason/Benifits to use api/ : 
-
 * Separate API logic	: Cleaner organization
 * Scalability : Easier to manage multiple views
 * DRF best practices : Helps structure serializers/views
