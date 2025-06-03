@@ -375,3 +375,29 @@ def book_list(request):
         # If the data is invalid, return validation error messages with 400 (Bad Request)
         return Response(serializer.errors, status=400)
 ```
+
+### **What Are HTTP Status Codes?**
+
+Status codes are standardized numbers sent in HTTP responses to tell the client what happened.
+
+| Code Range | Category      | Meaning                                |
+| ---------- | ------------- | -------------------------------------- |
+| 1xx        | Informational | Request received, continuing process   |
+| 2xx        | Success       | The request was successful             |
+| 3xx        | Redirection   | Further action needs to be taken       |
+| 4xx        | Client Error  | The request was incorrect (your fault) |
+| 5xx        | Server Error  | The server failed (server's fault)     |
+
+Common status sodes in DRF
+
+| Code | Name                             | When to Use                                           |
+| ---- | -------------------------------- | ----------------------------------------------------- |
+| 200  | `HTTP_200_OK`                    | Standard response for success (`GET`, `PUT`)          |
+| 201  | `HTTP_201_CREATED`               | New resource was created (`POST`)                     |
+| 204  | `HTTP_204_NO_CONTENT`            | Successful, but no content to return (e.g., `DELETE`) |
+| 400  | `HTTP_400_BAD_REQUEST`           | Client sent invalid data                              |
+| 401  | `HTTP_401_UNAUTHORIZED`          | User is not authenticated                             |
+| 403  | `HTTP_403_FORBIDDEN`             | Authenticated but not allowed to do the action        |
+| 404  | `HTTP_404_NOT_FOUND`             | Resource not found                                    |
+| 500  | `HTTP_500_INTERNAL_SERVER_ERROR` | Server crashed or misconfigured                       |
+
