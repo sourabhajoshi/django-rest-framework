@@ -1,7 +1,6 @@
 # Movie API – Django REST Framework Project
 
 A simple RESTful API built using **Django** and **Django REST Framework** to manage a collection of movies. This API supports full **CRUD operations** – Create, Read, Update, and Delete movie records.
-
 ---
 
 ## Features
@@ -15,7 +14,7 @@ A simple RESTful API built using **Django** and **Django REST Framework** to man
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - **Backend**: Django 4.x, Django REST Framework
 - **Database**: SQLite (default, easy setup)
@@ -24,7 +23,7 @@ A simple RESTful API built using **Django** and **Django REST Framework** to man
 
 ---
 
-## 🗃️ Folder Structure
+## Folder Structure
 ```
 movie_project/
 │
@@ -47,9 +46,6 @@ movie_project/
 ```
 
 ```
-
----
-
 ## Getting Started
 
 ### Prerequisites
@@ -60,7 +56,7 @@ movie_project/
 
 ### Setup Instructions
 
-```bash
+```
 # Step 1: Clone the repo
 git clone https://github.com/yourusername/movie-api-drf.git
 cd movie-api-drf
