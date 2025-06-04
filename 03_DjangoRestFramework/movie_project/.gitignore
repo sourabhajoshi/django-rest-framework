@@ -1,0 +1,6 @@
+# Virtual environments
+menv/
+-*.pyc
+__pycache__/
+db.sqlite3
+.idea/
