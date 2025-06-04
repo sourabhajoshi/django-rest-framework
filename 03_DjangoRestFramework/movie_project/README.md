@@ -58,7 +58,7 @@ movie_project/
 
 ```
 # Step 1: Clone the repo
-git clone https://github.com/yourusername/movie-api-drf.git
+git clone https://github.com/sourabhajoshi/django-rest-framework/tree/main/03_DjangoRestFramework/movie_project/movie-api-drf.git
 cd movie-api-drf
 
 # Step 2: Create and activate a virtual environment
