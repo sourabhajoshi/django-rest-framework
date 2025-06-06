@@ -7,11 +7,12 @@ from .serializers import MovieSerializer
 
 # Create your views here.
 #movie_list – GET all movies, POST a new movie
+# @api_view() by defualt it will carry only GET method
 @api_view(['GET', 'POST'])
 def movie_list(request):
     if request.method == 'GET':
         movies = Movie.objects.all() # get all the movie record from DB
-        serializer = MovieSerializer(movies, many=True) # serialize the list of movies
+        serializer = MovieSerializer(movies, many=True) # serialize the list of movies  +. when we have miltiple objects we need to set many=True. Otherwise we will get error
         return Response(serializer.data) # send serialized data as JSON
     
     elif request.method == 'POST':
