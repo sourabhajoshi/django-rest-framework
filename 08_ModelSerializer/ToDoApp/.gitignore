@@ -1,0 +1,6 @@
+# .gitignore
+tdavenv/
+*.pyc
+__pycache__/
+db.sqlite3
+.idea/
