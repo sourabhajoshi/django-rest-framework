@@ -10,7 +10,7 @@ class WatchListSerailizer(serializers.ModelSerializer):
 
 class StreamPlatformSerializer(serializers.ModelSerializer):
     # Show related watchlist items as nested objects
-    watchlist = WatchListSerailizer(many=True, read_only = True)
+    watchList = WatchListSerailizer(many=True, read_only = True) 
     
     class Meta:
         model = StreamPlatform
