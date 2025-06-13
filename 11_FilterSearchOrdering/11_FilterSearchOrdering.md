@@ -226,3 +226,5 @@ class BookViewSet(viewsets.ModelViewSet):
     # 🔧 Default ordering (if no ordering param is passed)
     ordering = ['id']
 ```
+
+----
