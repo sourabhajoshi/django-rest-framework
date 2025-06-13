@@ -226,12 +226,13 @@ class BookViewSet(viewsets.ModelViewSet):
     # 🔧 Default ordering (if no ordering param is passed)
     ordering = ['id']
 
-
+```
 Example : Scenario: Job Recruitment Platform
 
 Models:Company, JobPosting, Applicant and Application (through model between Job & Applicant)
 
 Folder structure
+
 ```
 recruitment_platform/
 ├── recruitment_platform/
