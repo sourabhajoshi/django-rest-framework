@@ -1,0 +1,6 @@
+# .gitignore
+jrpvenv/
+*.pyc
+__pycache__/
+db.sqlite3
+.idea/
