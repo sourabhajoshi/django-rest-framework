@@ -1,4 +1,4 @@
-# Scenario: E-Learning Platform
+# E-Learning Platform
 
 Key Entities (Models):
 - Instructor
