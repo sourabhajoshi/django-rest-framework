@@ -1,0 +1,40 @@
+@startuml
+
+class Instructor{
+    + id: int
+    + name: str
+    + email: str
+}
+
+class Course {
+    + id: int
+    + title: string
+    + description: text
+    + instructor_id: int
+}
+
+class Student {
+    + id: int
+    + name: string
+    + email: string
+}
+
+class Enrollment {
+    + id: int
+    + student_id: int
+    + course_id: int
+}
+
+class Lesson {
+    + id: int
+    + title: string
+    + content: text
+    + course_id: int
+}
+
+Instructor "1" -- "many" Course : teaches >
+Course "1" -- "many" Lesson : contains >
+Student "1" -- "many" Enrollment : enrolls >
+Course "1" -- "many" Enrollment : has >
+
+@enduml
