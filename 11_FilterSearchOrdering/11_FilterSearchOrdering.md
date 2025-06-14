@@ -100,7 +100,7 @@ Now you can do:
 /api/books/?title__startswith=Django
 ```
 
-# Filterning in DRF
+# Searching in DRF
 
 Searching allows API users to find records based on keywords across one or more fields — such as a book's title or its author's name.
 
