@@ -3,6 +3,7 @@ from .models import Instructor, Course, Student, Enrollment, Lesson
 from .serializers import InstructorSerailizer, CourseSerailizer, StudentSerializer, EnrollmentSerializer, LessonSerializer
 from rest_framework import viewsets, filters
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.permissions import IsAuthenticated
 
 class InstructorViewSet(viewsets.ModelViewSet):
     queryset = Instructor.objects.all()
@@ -11,6 +12,7 @@ class InstructorViewSet(viewsets.ModelViewSet):
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerailizer
+    permission_classes = [IsAuthenticated]
     
     # Enable filtering
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]

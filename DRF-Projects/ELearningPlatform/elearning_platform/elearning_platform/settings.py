@@ -130,4 +130,7 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',  # Enables search
         'rest_framework.filters.OrderingFilter',  # Enables ordering
     ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ]
 }
