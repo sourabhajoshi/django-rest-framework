@@ -53,6 +53,19 @@ class BookViewSet(viewsets.ModelViewSet):
     pagination_class = CustomPagination
 ```
 
+### **PageNumberPagination**
+
+PageNumberPagination is the simplest and most common pagination method in Django REST Framework (DRF).
+It works by dividing your dataset into pages and accessing them using a ?page= query parameter.
+
+Imagine a physical book with 100 pages.
+You don’t read all pages at once — you go to page 1, then page 2, and so on.
+
+Just like that, in an API:
+- Page 1 = first 10 items
+- Page 2 = next 10 items
+- And so on…
+
 Example : Library Management System - Book Catalog 
 
 This example used PageNumberPagination and individual pagination type.
@@ -190,3 +203,47 @@ class BookViewSet(viewsets.ModelViewSet):
     # Fields to allow ordering
     ordering_fields = ['publication_date', 'title']
 ```
+
+### **LimitOffsetPagination**
+
+LimitOffsetPagination allows the client to control: how many items to return (limit) and where to start in the dataset (offset)
+
+- ?limit= – How many results per request
+- ?offset= – Where to start in the dataset (zero-indexed)
+
+Think of a movie theater with 100 seats. You want to check seats 20 to 30. You don’t say “page 2” like in PageNumberPagination.
+
+Instead, you say:
+- Show me limit=10 seats
+- Starting from seat offset=20
+
+```
+GET /api/books/?limit=10&offset=20
+```
+
+Example of 10 Books
+```
+1. Book A
+2. Book B
+3. Book C
+4. Book D
+5. Book E
+6. Book F
+7. Book G
+8. Book H
+9. Book I
+10. Book J
+
+GET /api/books/?limit=3&offset=0 : Give me 3 books from start or 0th (1st pos) position
+1. Book A
+2. Book B
+3. Book C
+
+
+GET /api/books/?limit=3&offset=3 : Give me 3 books from starting 3 (4th position)
+4. Book D
+5. Book E
+6. Book F
+```
+
+
