@@ -1,4 +1,4 @@
-# Understanding of API
+# Understanding of API 
 
 API stands for Application Programming Interface.
 It acts like a middleman that allows two different software systems to talk to each other.
@@ -149,4 +149,4 @@ return complete list and we can perform GET and POST
 ```
 https://www.api.movielist.com/movies/123/ 
 ```
-return or connect to individual item and perform GET, PUT, DELETE
+return or connect to individual item and perform GET, PUT, DELETE.
