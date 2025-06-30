@@ -1,0 +1,27 @@
+@startuml
+
+class Post{
+    +id : Integer 
+    +title : String
+    +Content : Text 
+    +Auther : String 
+    +Created_at : DateTime
+}
+
+class PostSerializer {
+    +meta:
+    --model: Post
+    --fields: __all__
+}
+
+class PostViewSet {
+  -queryset: Post.objects
+  -serializer_class: PostSerializer
+  -authentication_classes: [BasicAuthentication]
+  -permission_classes: [IsAuthenticated]
+}
+
+PostSerializer --> Post : uses
+PostViewSet --> PostSerializer : uses
+
+@enduml
