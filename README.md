@@ -27,7 +27,8 @@ Welcome to the DRF (Django REST Framework) Learning Repository. This repo contai
 
 ---
 
-## Contributions
+### Contributions
 
 Feel free to fork, contribute, or raise issues if you'd like to collaborate!
+
 ---
