@@ -27,7 +27,7 @@ Real-Time Example: ATM Machine
 #### **Types of Authentication**
 Basic Authentication, Token Authentication and JWT Authentication
 
-1. Basic Authentication
+## 1. Basic Authentication
 
 How it works: Username and password are sent with every request, encoded in Base64.
 
