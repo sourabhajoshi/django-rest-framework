@@ -1,10 +1,10 @@
-# 📚 Django REST Framework Learning Path
+# Django REST Framework
 
 Welcome to the DRF (Django REST Framework) Learning Repository. This repo contains step-by-step resources to help you understand core and advanced topics in API development using Django and DRF.
 
 ---
 
-## 📘 Chapters
+## Chapters
 
 1. [01 - API Concepts](./01_API_Concepts)
 2. [02 - API With Django](./02_APIWithDjango)
@@ -27,7 +27,7 @@ Welcome to the DRF (Django REST Framework) Learning Repository. This repo contai
 
 ---
 
-## 🙌 Contributions
+## Contributions
 
 Feel free to fork, contribute, or raise issues if you'd like to collaborate!
 ---
