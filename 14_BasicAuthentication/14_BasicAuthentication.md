@@ -11,7 +11,7 @@ Real-Time Example: ATM Machine
 | ---- | --------------------------- | -------------- | --------------------------------------------------------------------------- |
 | 1    | You insert your debit card  | Identification | The ATM recognizes **who you are claiming to be**                           |
 | 2    | You enter your 4-digit PIN  | Authentication | The ATM checks if the PIN matches your card’s data                          |
-| 3    | PIN is correct              | ✅ Success      | You are **authenticated** – your identity is confirmed                      |
+| 3    | PIN is correct              | Success      | You are **authenticated** – your identity is confirmed                      |
 | 4    | You choose "Withdraw ₹1000" | Authorization  | The system checks if you’re **allowed** to withdraw ₹1000 from your balance |
 
 #### **Authentication vs Permission**
