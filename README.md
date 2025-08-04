@@ -27,40 +27,31 @@ Welcome to the DRF (Django REST Framework) Learning Repository. This repo contai
 
 ---
 
-## Django Topics
+## 20-Day Django + DRF Plan (Condensed)
 
-| Day | Topic                                              |
-| --- | -------------------------------------------------- |
-| 1   | Setup Django + DRF, Create project/app             |
-| 2   | Define Models (One-to-One, ForeignKey, ManyToMany) |
-| 3   | Migrations, Django Admin for Models                |
-| 4   | ModelSerializer – What & Why                       |
-| 5   | Create Serializer for your model                   |
-| 6   | APIView (Class-Based Views) – GET/POST/PUT/DELETE  |
-| 7   | DRF Request/Response/Status – Deep dive            |
-| 8   | ViewSets – ReadOnlyModelViewSet vs ModelViewSet         |
-| 9   | Using Routers to register ViewSets                      |
-| 10  | Customizing ViewSet methods                             |
-| 11  | Default Permissions + IsAuthenticated, AllowAny         |
-| 12  | Custom Permissions (e.g., IsOwner, IsAdminUser)         |
-| 13  | Testing Permission classes                              |
-| 14  | Practice Day: Build CRUD API with ViewSet + Permissions |
-| 15  | Basic Authentication                                |
-| 16  | Token Authentication                                |
-| 17  | JWT Authentication (with SimpleJWT)                 |
-| 18  | Protecting routes with permissions & authentication |
-| 19  | Role-based access control (staff vs user)           |
-| 20  | Custom User Model (optional)                        |
-| 21  | Practice Day: Auth-protected API with ViewSet       |
-| 22  | Filtering APIs (query params, DjangoFilterBackend) |
-| 23  | Searching (SearchFilter)                           |
-| 24  | Ordering (OrderingFilter)                          |
-| 25  | Pagination (PageNumber, LimitOffset, Cursor)       |
-| 26  | Throttling (Anon/UserThrottle + custom throttles)  |
-| 27  | DRF built-in exceptions & error handling           |
-| 28  | API Testing using Postman / DRF APIClient          |
-| 29  | Automated testing with DRF’s `APIClient`           |
-| 30  | Final project review & GitHub portfolio push       |
+| Day        | Topics                                                             |
+| ---------- | ------------------------------------------------------------------ |
+| **Day 1**  | Django + DRF Setup <br> Create project/app, app structure          |
+| **Day 2**  | Models: One-to-One, ForeignKey, ManyToMany <br> Migrations + Admin |
+| **Day 3**  | ModelSerializer: Theory + Implementation                           |
+| **Day 4**  | Class-Based Views with APIView <br> Request/Response/Status        |
+| **Day 5**  | ViewSets: `ModelViewSet` vs `ReadOnlyModelViewSet`                 |
+| **Day 6**  | Routers + Custom ViewSet methods                                   |
+| **Day 7**  | Permissions: Default + `IsAuthenticated`, `AllowAny`               |
+| **Day 8**  | Custom Permissions (`IsOwner`, `IsAdminUser`)                      |
+| **Day 9**  | Practice: Build CRUD API with ViewSet + Permissions                |
+| **Day 10** | Authentication: Basic + Token                                      |
+| **Day 11** | JWT Authentication (SimpleJWT)                                     |
+| **Day 12** | Protecting Routes + Role-based Access Control                      |
+| **Day 13** | Filtering with DjangoFilterBackend                                 |
+| **Day 14** | Searching + Ordering APIs                                          |
+| **Day 15** | Pagination: PageNumber, LimitOffset, Cursor                        |
+| **Day 16** | Throttling: Anon/User Throttle + Custom                            |
+| **Day 17** | API Exceptions + Error Handling Best Practices                     |
+| **Day 18** | API Testing with Postman + APIClient                               |
+| **Day 19** | Automated Testing with DRF’s `APIClient`                           |
+| **Day 20** | Final Project Review + GitHub Push & Portfolio Prep                |
+
 
 Vue 3 – 20-Day Timetable (Essentials + Scalable Frontend)
 
