@@ -62,6 +62,33 @@ Welcome to the DRF (Django REST Framework) Learning Repository. This repo contai
 | 29  | Automated testing with DRF’s `APIClient`           |
 | 30  | Final project review & GitHub portfolio push       |
 
+Vue 3 – 20-Day Timetable (Essentials + Scalable Frontend)
+
+| Day       | Topics                                                                            |
+| --------- | --------------------------------------------------------------------------------- |
+| **Day 1** | Introduction & Setup (Vite / Vue CLI) <br> Project structure + DevTools           |
+| **Day 2** | Template Syntax (interpolation, expressions, `v-bind`) <br> Conditional Rendering |
+| **Day 3** | List Rendering (`v-for`, key binding) <br> Looping arrays & objects               |
+| **Day 4** | Event Handling (`@click`, modifiers) <br> Form Basics                             |
+| **Day 5** | Form Input Bindings (`v-model`, checkboxes, modifiers)                            |
+| **Day 6** | Reactivity Basics: `ref`, `reactive`, `toRefs`                                    |
+| **Day 7** | Computed Properties vs Watchers <br> Deep watchers + use cases                    |
+| **Day 8**  | Component Basics: Props + Emitting Events                    |
+| **Day 9**  | Lifecycle Hooks <br> `onMounted`, `onUpdated`, `onUnmounted` |
+| **Day 10** | Component `v-model` <br> Slots (default, named)              |
+| **Day 11** | Provide/Inject API <br> Fallthrough attributes               |
+| **Day 12** | Built-in Components: `Transition`, `Teleport`, `Suspense`    |
+| **Day 13** | Single File Components (SFC) <br> Folder organization tips   |
+| **Day 14** | Composables (custom logic with `setup()`)                    |
+| **Day 15** | Vue Router - Part 1: Setup, Static & Dynamic Routes, Route Params              |
+| **Day 16** | Vue Router - Part 2: Nested Routes, Navigation Guards, Programmatic Navigation |
+| **Day 17** | Pinia - Part 1: Setup, Store Basics (`defineStore`), State + Actions           |
+| **Day 18** | Pinia - Part 2: Using stores in components, DevTools, Store best practices     |
+| **Day 19** | Axios + Fetching Data <br> Handling async, error states, loading indicators           |
+| **Day 20** | Final Project: Build a Mini App using Router + Pinia + API (e.g., blog, task manager) |
+
+
+
 
 
 
