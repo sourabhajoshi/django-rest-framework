@@ -27,6 +27,8 @@ Welcome to the DRF (Django REST Framework) Learning Repository. This repo contai
 
 ---
 
+## Django Topics
+
 | Day | Topic                                              |
 | --- | -------------------------------------------------- |
 | 1   | Setup Django + DRF, Create project/app             |
