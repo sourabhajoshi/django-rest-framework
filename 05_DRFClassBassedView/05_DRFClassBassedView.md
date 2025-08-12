@@ -1,6 +1,6 @@
 # Django REST Framework (Class-Based View)
 
-### **APIView in DRF**
+### **API View in DRF**
 
 APIView is the base class for class-based views in DRF. It gives you more control and flexibility compared to function-based @api_view.
 
