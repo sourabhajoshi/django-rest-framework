@@ -1,4 +1,4 @@
-# Understanding of API :
+# Understanding of API
 
 API stands for Application Programming Interface.
 It acts like a middleman that allows two different software systems to talk to each other.
