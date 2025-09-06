@@ -19,7 +19,7 @@ Validation that involves multiple fields together or the object as a whole.
 - In Forms/ModelForms via clean()
 - In Models via clean()
 
-You need to compare or cross-check multiple fields (e.g., passwords match, discount < price).
+You need to compare or cross check multiple fields (e.g., passwords match, discount < price).
 
 The validation logic depends on more than one field.
 
