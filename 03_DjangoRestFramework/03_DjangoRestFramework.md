@@ -4,7 +4,7 @@ Django REST Framework (DRF) is a powerful library built on top of Django that he
 
 DRF helps you convert your Django models and views into API endpoints that return data in JSON format — perfect for mobile apps, frontend frameworks (like React/Vue), or any external service.
 
-**Why Use DRF?**
+**Why Use DRF?**  
 
 * Easy to build APIs for frontend apps (React, Vue, etc.)
 * Supports authentication, permissions, filtering, pagination
