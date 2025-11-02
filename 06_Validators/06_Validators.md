@@ -1,6 +1,6 @@
 # Validation in DRF
 
-In Django, validation refers to the process of checking that the data submitted by a user (e.g. through a form or API) is correct, complete, and in the expected format before it is saved to the database or used in your application.
+In Django, validation refers to the process of checking that the data submitted by a user (e.g. through a form or API) is correct, complete, and in the expected format before it is saved to the database or used in your application.   
 
 Validation ensures data integrity, security, and user-friendly feedback.  
 
