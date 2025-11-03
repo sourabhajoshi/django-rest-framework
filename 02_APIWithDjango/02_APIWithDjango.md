@@ -14,7 +14,7 @@ You can check Django versions here: https://www.djangoproject.com/download/
 * There are regular releases and LTS (Long-Term Support) releases.
 * Current version (as of 2025): likely 5.x (Check the official link for the latest)
 
-### **Step-by-Step: Install and Run a Django App**
+### **Step-by-Step: Install and Run a Django App**  
 
 Step 1: Create a project folder
 ```
