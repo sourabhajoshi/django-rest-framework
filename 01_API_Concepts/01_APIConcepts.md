@@ -1,6 +1,6 @@
 # Understanding of API
 
-API stands for Application Programming Interface.
+API stands for Application Programming Interface.    
 It acts like a middleman that allows two different software systems to talk to each other.
 
 API is a bridge that lets one app use features of another app without building them from scratch.
