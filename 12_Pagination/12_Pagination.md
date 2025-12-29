@@ -1,6 +1,10 @@
 # Pagination
 
-Pagination is the process of dividing large data sets into smaller, manageable chunks or “pages”.
+Pagination is the process of splitting large data into smaller parts (pages) instead of sending everything at once to the client.
+It helps improve performance, response time, and memory usage.
+
+Pagination ಅಂದರೆ ದೊಡ್ಡ data ಅನ್ನು ಪುಟಗಳಾಗಿ (pages ಆಗಿ) ಹಂಚಿ client ಗೆ ಕಳುಹಿಸುವುದು.
+ಇದರಿಂದ server ಮೇಲೆ load ಕಡಿಮೆ ಆಗುತ್ತದೆ ಮತ್ತು response ವೇಗವಾಗಿರುತ್ತದೆ.
 
 For example:
 - If you have 1000 books in your DB, you don’t want to send all 1000 at once.
@@ -15,6 +19,12 @@ For example:
 | Improves user experience | Frontend shows data page-by-page (infinite scroll, next/prev). |
 | Saves memory             | Backend and frontend both use less RAM.                        |
 
+| English                | Kannada                     |
+| ---------------------- | --------------------------- |
+| Faster APIs            | API ವೇಗ ಹೆಚ್ಚು              |
+| Less data load         | Memory ಬಳಕೆ ಕಡಿಮೆ           |
+| Better user experience | User ಗೆ ಸುಲಭ & ಸ್ಪಷ್ಟ       |
+| Easy to navigate       | ಫಲಿತಾಂಶ ನವೀನವಾಗಿ ನೋಡಲು ಸುಲಭ |
 
 **Types of Pagination in DRF**
 
@@ -57,6 +67,9 @@ class BookViewSet(viewsets.ModelViewSet):
 
 PageNumberPagination is the simplest and most common pagination method in Django REST Framework (DRF).
 It works by dividing your dataset into pages and accessing them using a ?page= query parameter.
+
+ಪುಸ್ತಕ ಓದುವಂತೆ ಪುಟ 1, ಪುಟ 2, ಪುಟ 3 ಎಂದು ಹೋಗುತ್ತದೆ.
+API ಯಲ್ಲಿ ?page= ಮೂಲಕ data ಪಡೆಯಬಹುದು.
 
 Imagine a physical book with 100 pages.
 You don’t read all pages at once — you go to page 1, then page 2, and so on.
@@ -208,8 +221,8 @@ class BookViewSet(viewsets.ModelViewSet):
 
 LimitOffsetPagination allows the client to control: how many items to return (limit) and where to start in the dataset (offset)
 
-- ?limit= – How many results per request
-- ?offset= – Where to start in the dataset (zero-indexed)
+- ?limit= – How many results per request. (ಎಷ್ಟು data ಬೇಕು)
+- ?offset= – Where to start in the dataset (zero-indexed) (ಯಾವ ಸ್ಥಾನದಿಂದ ಶುರು ಮಾಡಬೇಕು)
 
 Think of a movie theater with 100 seats. You want to check seats 20 to 30. You don’t say “page 2” like in PageNumberPagination.
 
@@ -245,5 +258,19 @@ GET /api/books/?limit=3&offset=3 : Give me 3 books from starting 3 (4th position
 5. Book E
 6. Book F
 ```
+
+### **CursorPagination**
+
+Most secure and most performant, Uses an encrypted cursor instead of page number and it's Good for large datasets (10,000+ records)
+
+ಇಲ್ಲಿ ಸಂಖ್ಯೆ (page) ಬದಲು ಸುರಕ್ಷಿತ token/cursor ಬರುತ್ತದೆ. User ಗೆ page count ಗೊತ್ತಾಗುವುದಿಲ್ಲ → security ಜಾಸ್ತಿ.
+
+```
+/api/books/?cursor=cD0yMDIyLTAxLTAx
+```
+- Cursor = Secret Pointer / Bookmark
+
+
+
 
 
