@@ -1,6 +1,10 @@
 # Filterning in DRF
 
-Filtering in DRF allows users to narrow down the results of a query by adding parameters to the URL.
+Filtering in DRF is used to get specific data based on conditions like category, date, author, status, etc.
+It helps clients request only the data they need instead of the entire list.
+
+DRF ನಲ್ಲಿ Filtering ಅಂದರೆ ನಿರ್ದಿಷ್ಟ data ಅನ್ನು filter condition ಆಧರಿಸಿ ಪಡೆಯುವುದು.
+ಉದಾಹರಣೆ: category, author, status ಆಧರಿಸಿ data ತೆಗೆದುಕೊಳ್ಳುವುದು.
 ```
 GET /api/books/?author=3 
 
@@ -11,6 +15,13 @@ GET /api/books/?author=3
 - Makes your API more dynamic and useful.
 - Reduces the need for multiple hard-coded endpoints.
 - Enables frontend and mobile apps to fetch filtered data easily.
+
+| English                     | Kannada                      |
+| --------------------------- | ---------------------------- |
+| Reduce unnecessary API data | ಅನಗತ್ಯ data ಕಡಿಮೆ            |
+| Faster responses            | ವೇಗ ಹೆಚ್ಚು                   |
+| More control to client      | client ಗೆ data ಮೇಲೆ ನಿಯಂತ್ರಣ |
+| Makes API user-friendly     | API ಬಳಕೆ ಸುಲಭ                |
 
 Let’s assume you already have a Book model with a foreign key to an Author.
 
@@ -33,7 +44,7 @@ Step 3: Configure DRF to Use Filtering Backend
 ```
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
-        'django_filters.rest_framework.DjangoFilterBackend',  # Enables filtering support
+        'django_filters.rest_framework.DjangoFilterBackend',  # Enables filtering support, Filtering ಮಾಡಲು
     ]
 }
 
@@ -104,6 +115,10 @@ Now you can do:
 
 Searching allows API users to find records based on keywords across one or more fields — such as a book's title or its author's name.
 
+Searching in DRF allows users to search/filter data using a keyword in specific fields like title, name, email, description, etc.
+
+DRF ನಲ್ಲಿ Searching ಅಂದರೆ ಬಳಕೆದಾರರು ಒಂದು ಪದ ಅಥವಾ ಪ್ಯಾಟರ್ನ್ ಮೂಲಕ data ಹುಡುಕಲು ಅವಕಾಶ.
+
 ```
 GET /api/books/?search=django
 ```
@@ -114,6 +129,12 @@ Why Use Searching?
 - Great for global keyword lookups.
 - Essential for search bars, autocomplete, and admin filtering.
 
+| English                     | Kannada                      |
+| --------------------------- | ---------------------------- |
+| Easy to find specific data  | ನಿರ್ದಿಷ್ಟ data ಹುಡುಕಲು ಸುಲಭ  |
+| Improves user experience    | user ಗೆ ವ್ಯವಸ್ಥೆ ಸುಲಭ        |
+| No need for complex filters | ದೊಡ್ಡ query ಬೇಡ, ಸರಳ ಹುಡುಕಾಟ |
+| Supports partial matches    | ಭಾಗಿಕ ಪದಗಳ ಮೂಲಕ ಹುಡುಕಬಹುದು   |
 
 Step 1: Add SearchFilter to Your Project
 
@@ -124,6 +145,11 @@ Just add it to your REST framework config or view.
 Step 1 : Global setup in settings.py
 ```
 # settings.py
+
+INSTALLED_APPS = [
+    ...,
+    'django_filters',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
@@ -148,7 +174,7 @@ class BookViewSet(viewsets.ModelViewSet):
     # Enables search functionality
     filter_backends = [filters.SearchFilter]
 
-    # Fields you want to enable for search
+    # Fields you want to enable for search ಯಾವ fields ನಲ್ಲಿ ಹುಡುಕಬೇಕು ಅಂತ ಹೇಳೋದು.
     search_fields = ['title', 'author__name']
 ```
 
@@ -178,6 +204,8 @@ Related fields (author__name) work only if related model has a __str__() method
 # Ordering in DRF
 
 Ordering allows users to sort API results based on one or more fields.
+
+DRF ನಲ್ಲಿ Ordering ಅಂದರೆ data ಅನ್ನು ಅಕ್ಷರಕ್ರಮ / ಸಂಖ್ಯೆಕ್ರಮ / ದಿನಾಂಕ ಆಧಾರವಾಗಿ sort ಮಾಡುವುದು.
 ```
 GET /api/books/?ordering=title # This will return books ordered alphabetically by title (A to Z).
 
@@ -189,6 +217,14 @@ Why Use Ordering?
 - Useful for listing newest or oldest items.
 - Helps users sort alphabetically, by price, by date, etc.
 - Supports multiple field sorting.
+
+| English                      | Kannada                         |
+| ---------------------------- | ------------------------------- |
+| Organize API results         | API ಫಲಿತಾಂಶ ಅಚ್ಚುಕಟ್ಟಾಗಿರುತ್ತದೆ |
+| Helps users read data better | user ಗೆ ಸುಲಭವಾಗಿ ಓದಲು           |
+| Fast, dynamic sorting        | ತಕ್ಷಣವೇ ಕ್ರಮ ಬದಲಾಯಿಸಬಹುದು       |
+| No need of custom queries    | ಹೊಸ query ಬರೆಯಬೇಕಿಲ್ಲ           |
+
 
 Step 1: No extra installation needed
 
