@@ -3,6 +3,11 @@
 API stands for Application Programming Interface.    
 It acts like a middleman that allows two different software systems to talk to each other.
 
+OR
+API stands for Application Programming Interface, a set of rules that allows two software systems to communicate and share data with each other.
+
+API ಎಂದರೆ Application Programming Interface, ಇದು ಎರಡು ಸಾಫ್ಟ್‌ವೇರ್‌ಗಳು ಪರಸ್ಪರ ಮಾಹಿತಿ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳಲು ಬಳಕೆಯಾಗುವ ನಿಯಮಗಳು ಮತ್ತು ಸೇತುವೆ.
+
 API is a bridge that lets one app use features of another app without building them from scratch.
 
 **Example: Uber and Google Maps**
@@ -71,10 +76,16 @@ Example:
 **API Provider vs API Consumer**
 
 1. API Provider
-Creates and exposes the API. Handles the logic, data, and functionality behind the scenes. Maintains documentation, authentication, rate limits, etc.
+The API Provider is the owner or creator of the API. They build the system, control the data, and give others access to use it.
+
+API Provider ಅಂದರೆ API ರಚಿಸುವವರು.
+ಅವರು ಡೇಟಾ, ಸರ್ವರ್ ಮತ್ತು ನಿಯಮಗಳನ್ನು ನಿಯಂತ್ರಿಸುತ್ತಾರೆ ಮತ್ತು ಇತರರಿಗೆ ಬಳಸಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತಾರೆ.
 
 2. API Consumer
-Uses the API to access data or features. Sends requests and receives responses from the provider.
+The API Consumer is the user of the API. They request information or services from the API provider.
+
+API Consumer ಅಂದರೆ API ಬಳಕೆ ಮಾಡುವವರು.
+ಅವರು Provider ಗೆ request ಕಳುಹಿಸಿ response ಪಡೆಯುತ್ತಾರೆ.
 
 # What is a URL
 
