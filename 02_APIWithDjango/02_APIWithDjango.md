@@ -1,9 +1,14 @@
 # Django  
 
-Django is a high-level Python web framework that helps you build web applications quickly and with clean, reusable code.
+Django is a high-level Python web framework used to build web applications.
 
-* It follows the MVT pattern (Model-View-Template).
-* Comes with batteries included – meaning you get authentication, admin panel, database ORM, routing, etc., out of the box.
+It provides a clean structure, reusable components, and comes with many built-in features like authentication, admin panel, ORM, and URL routing.
+
+Django follows the MVT (Model–View–Template) architectural pattern and helps developers create secure, scalable, and maintainable applications.
+
+Django ಒಂದು Python ಆಧಾರಿತ ವೆಬ್ ಫ್ರೇಮ್‌ವರ್ಕ್, ಇದು ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಬೇಗ, ಸುಲಭವಾಗಿ ಮತ್ತು ವ್ಯವಸ್ಥಿತವಾಗಿ ನಿರ್ಮಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.
+Authentication, Admin panel, ORM, URL Routing போன்ற built-in ಸೌಲಭ್ಯಗಳು Django ಯಲ್ಲೇ ಸಿಗುತ್ತವೆ.
+Django MVT (Model–View–Template) ವಿನ್ಯಾಸ ಮಾದರಿಯನ್ನು ಅನುಸರಿಸುತ್ತದೆ ಮತ್ತು ಸುರಕ್ಷಿತ, ದೊಡ್ಡ ಮಟ್ಟದ (scalable) ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸಲು ಸೂಕ್ತವಾಗಿದೆ.
 
 Example Use Cases : Blogs, eCommerce websites, APIs and admin dashboards...
 
@@ -30,7 +35,7 @@ A virtual environment is an isolated space for Python projects. It allows you to
 * Keeps your project clean and reproducible.
 
 ```
-python -m venv venv
+python -m venv venv # venv ಎನ್ನುವ virtual environment ಸೃಷ್ಟಿ
 ```
 
 Step 3: Activate the virtual environment
@@ -103,14 +108,13 @@ A project is the main container for your entire Django web application.
 - Think of it as your overall website.
 ```
 mysite/
-│
-├── mysite/        ← Project settings (main config)
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-│
-├── manage.py      ← Project manager script
+    manage.py           # Project controller (project run ಮಾಡಲು)
+    mysite/
+        __init__.py     # Marks directory as Python package
+        settings.py     # Project settings (database, apps, etc.)
+        urls.py         # URL Routing (routes/paths)
+        asgi.py         # Async config
+        wsgi.py         # For deployment (web server)
 ```
 
 ### **What is a Django App?**
@@ -121,13 +125,13 @@ An app is a component or feature of the project.
 - You can reuse the same app in other Django projects.
 - Each app contains models, views, templates, and URLs related to one feature.
 ```
-blog/
-├── admin.py
-├── apps.py
-├── models.py     ← Database models
-├── views.py      ← Business logic
-├── urls.py       ← Routes
-└── templates/    ← HTML files
+home/
+    admin.py        # Admin site configurations
+    apps.py         # App configuration file
+    models.py       # Database Models
+    views.py        # Request handlers (logic)
+    urls.py         # App routing (manual create)
+    templates/      # HTML files (manual create)
 ```
 
 ### **What is LTS Support?**
