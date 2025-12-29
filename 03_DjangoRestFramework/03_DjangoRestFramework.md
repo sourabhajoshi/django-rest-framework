@@ -98,6 +98,14 @@ Reason/Benifits to use api/ :
 ### **What is Serializer?**
 
 Serialization is the process of converting a Python object (like a dictionary, list, or class instance) into a JSON string.
+
+OR
+
+A Serializer in Django REST Framework is used to convert complex data (like Django models, querysets) into Python data types that can be easily converted to JSON / XML to send in API responses.
+It also helps in converting JSON data back into Python objects while receiving data from API requests.
+
+Django REST Framework ನಲ್ಲಿ Serializer ಎನ್ನುವುದು models ಮತ್ತು complex data ಅನ್ನು JSON format ಗೆ ಮಾರ್ಪಡಿಸುತ್ತದೆ.
+ಮತ್ತು user ಕಳುಹಿಸುವ JSON data ಅನ್ನು Python objects / model data ಗೆ ತಿರುಗಿಸುತ್ತದೆ.
 ```
 json.dumps() — Python object to JSON string
 ```
@@ -105,6 +113,11 @@ json.dumps() — Python object to JSON string
 ### **What is Deserializer?**
 
 Deserialization is the opposite, it takes the JSON string and converts it back into the original Python object.
+
+A DeSerializer in Django REST Framework is the process of taking incoming data (mostly JSON from API requests) and converting it into Python objects / Django model instances.
+It is the reverse process of Serialization.
+
+DeSerializer ಅಂದ್ರೆ API request ನಲ್ಲಿ ಬರುವ JSON data ಅನ್ನು Python objects / Model instances ಗೆ ತಿರುಗಿಸುವ ಪ್ರಕ್ರಿಯೆ.
 ```
 json.loads() — JSON string back to Python object
 ```
