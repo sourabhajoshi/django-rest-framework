@@ -63,5 +63,3 @@ class BookSerializer(serializers.ModelSerializer):
         exclude = ['created_at', 'updated_at']
 ```
 
-
-### **Types of validation in Django**
