@@ -4,6 +4,7 @@ API stands for Application Programming Interface.
 It acts like a middleman that allows two different software systems to talk to each other.
 
 OR
+
 API stands for Application Programming Interface, a set of rules that allows two software systems to communicate and share data with each other.
 
 API ಎಂದರೆ Application Programming Interface, ಇದು ಎರಡು ಸಾಫ್ಟ್‌ವೇರ್‌ಗಳು ಪರಸ್ಪರ ಮಾಹಿತಿ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳಲು ಬಳಕೆಯಾಗುವ ನಿಯಮಗಳು ಮತ್ತು ಸೇತುವೆ.
@@ -76,16 +77,16 @@ Example:
 **API Provider vs API Consumer**
 
 1. API Provider
-The API Provider is the owner or creator of the API. They build the system, control the data, and give others access to use it.
+   
+  The API Provider is the owner or creator of the API. They build the system, control the data, and give others access to use it.
 
-API Provider ಅಂದರೆ API ರಚಿಸುವವರು.
-ಅವರು ಡೇಟಾ, ಸರ್ವರ್ ಮತ್ತು ನಿಯಮಗಳನ್ನು ನಿಯಂತ್ರಿಸುತ್ತಾರೆ ಮತ್ತು ಇತರರಿಗೆ ಬಳಸಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತಾರೆ.
+  API Provider ಅಂದರೆ API ರಚಿಸುವವರು.
+  ಅವರು ಡೇಟಾ, ಸರ್ವರ್ ಮತ್ತು ನಿಯಮಗಳನ್ನು ನಿಯಂತ್ರಿಸುತ್ತಾರೆ ಮತ್ತು ಇತರರಿಗೆ ಬಳಸಲು ಅವಕಾಶ ಮಾಡಿಕೊಡುತ್ತಾರೆ.
 
 2. API Consumer
-The API Consumer is the user of the API. They request information or services from the API provider.
-
-API Consumer ಅಂದರೆ API ಬಳಕೆ ಮಾಡುವವರು.
-ಅವರು Provider ಗೆ request ಕಳುಹಿಸಿ response ಪಡೆಯುತ್ತಾರೆ.
+  The API Consumer is the user of the API. They request information or services from the API provider.
+  
+  API Consumer ಅಂದರೆ API ಬಳಕೆ ಮಾಡುವವರು. ಅವರು Provider ಗೆ request ಕಳುಹಿಸಿ response ಪಡೆಯುತ್ತಾರೆ.
 
 # What is a URL
 
@@ -160,4 +161,41 @@ return complete list and we can perform GET and POST
 ```
 https://www.api.movielist.com/movies/123/ 
 ```
-return or connect to individual item and perform GET, PUT, DELETE.
+return or connect to individual item and perform GET, PUT, DELETE. 
+
+**Important API Terms**
+| Term                                        | English Meaning                                | Kannada Meaning                               |
+| ------------------------------------------- | ---------------------------------------------- | --------------------------------------------- |
+| **API (Application Programming Interface)** | Bridge for communication between systems       | ಎರಡು ಸಿಸ್ಟಂ ನಡುವೆ ಸಂವಹನ ಮಾಡುವ ಸೇತು            |
+| **Client**                                  | The application requesting data                | ಡೇಟಾ ಕೇಳುವ ಭಾಗ / ಬಳಕೆದಾರ ಪಕ್ಕ                 |
+| **Server**                                  | System that processes requests & sends data    | ಡೇಟಾ ಕೆಲಸ ಮಾಡುವ / ಹಿಂತಿರುಗಿ ಕಳುಹಿಸುವ ವ್ಯವಸ್ಥೆ |
+| **Request**                                 | Asking API for something                       | API ಗೆ ಬೇಡಿಕೆ / ಕೇಳುವುದು                      |
+| **Response**                                | Data received back from API                    | API ಯಿಂದ ಬಂದ ಉತ್ತರ                            |
+| **Endpoint**                                | URL path of API                                | API URL ವಿಳಾಸ / ದಾರಿ                          |
+| **Base URL**                                | Main domain of API                             | API ಯ ಮೂಲ ವಿಳಾಸ                               |
+| **HTTP Methods**                            | Type of action (GET, POST, etc.)               | ಯಾವ ಕೆಲಸ ಮಾಡಬೇಕು ಎಂಬ ಸೂಚನೆ                    |
+| **GET**                                     | Fetch data                                     | ಡೇಟಾ ತಂದುಕೊಡು                                 |
+| **POST**                                    | Add new data                                   | ಹೊಸದು ಸೇರಿಸು                                  |
+| **PUT**                                     | Update existing data                           | ಹಳೆಯದನ್ನು ಪರಿಷ್ಕರಿಸು                          |
+| **DELETE**                                  | Remove data                                    | ಅಳಿಸು                                         |
+| **Payload / Body**                          | Data sent with request (POST/PUT)              | ಕಳುಹಿಸುವ ಡೇಟಾ ಮಾಹಿತಿ                          |
+| **Headers**                                 | Extra info (type, token)                       | ಹೆಚ್ಚುವರಿ ಮಾಹಿತಿ (ಟೋಕನ್, ಫಾರ್ಮ್ಯಾಟ್)          |
+| **Authentication**                          | Proving identity to access API                 | API ಯನ್ನು ಪ್ರವೇಶಿಸಲು ಗುರುತಿನ ಪರಿಶೀಲನೆ         |
+| **API Key**                                 | Unique ID to access API securely               | API ಬಳಸಲು ವಿಶೇಷ ಕೀಯ್ / ಪಾಸ್‌ಕೋಡ್              |
+| **Token (JWT)**                             | Secure login proof for requests                | ಭದ್ರತಾ ಪ್ರಮಾಣಪತ್ರ / ಗುರುತು                    |
+| **Rate Limit**                              | Limit of requests allowed                      | ಎಷ್ಟು ಬಾರಿ ಕೇಳಬಹುದು ಅನ್ನೋ ಮಿತಿ                |
+| **Status Code**                             | Result code of request                         | ಬೇಡಿಕೆಯ ಫಲಿತಾಂಶದ ಸೂಚನೆ                        |
+| **200 OK**                                  | Successful                                     | ಯಶಸ್ವಿ                                        |
+| **201 Created**                             | New record created                             | ಹೊಸದು ಸೇರಿತು                                  |
+| **400 Bad Request**                         | Wrong request format                           | ತಪ್ಪಾದ ಬೇಡಿಕೆ                                 |
+| **401 Unauthorized**                        | Login/token missing                            | ಪ್ರವೇಶ ನಿರಾಕರಿಸಲಾಗಿದೆ                         |
+| **404 Not Found**                           | API/URL not found                              | ವಿಳಾಸ ಸಿಗಲಿಲ್ಲ                                |
+| **500 Server Error**                        | Server problem                                 | ಸರ್ವರ್ ದೋಷ                                    |
+| **JSON (JavaScript Object Notation)**       | Data format used in API                        | API ಡೇಟಾ ಫಾರ್ಮ್ಯಾಟ್                           |
+| **Serialization**                           | Convert data to transferable format            | ಡೇಟಾವನ್ನು ಕಳುಹಿಸಬಹುದಾದ ರೂಪಕ್ಕೆ ಪರಿವರ್ತನೆ      |
+| **Deserialization**                         | Convert API response to usable format in code  | ಬಳಕೆಮಾಡಬಹುದಾದ ರೂಪಕ್ಕೆ ಮರಳಿ ಪರಿವರ್ತನೆ          |
+| **Latency**                                 | Time taken for response                        | ಉತ್ತರ ಬರಲು ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ                  |
+| **Versioning (v1, v2...)**                  | Different versions of the API                  | API ಯ ವಿಭಿನ್ನ ಆವೃತ್ತಿಗಳು                      |
+| **Webhook**                                 | API sends data automatically when event occurs | ಕಾರ್ಯಕ್ರಮ ನಡೆದಾಗ ಸ್ವಯಂ ಡೇಟಾ ಕಳುಹಿಸುವ ವಿಧಾನ    |
+
+
