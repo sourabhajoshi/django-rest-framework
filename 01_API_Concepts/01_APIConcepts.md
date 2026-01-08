@@ -12,7 +12,7 @@ API ಎಂದರೆ Application Programming Interface, ಇದು ಎರಡು �
 API is a bridge that lets one app use features of another app without building them from scratch.
 
 **Example: Uber and Google Maps**
-* Uber is one application (project).
+* Uber is one application (project).     
 * Google Maps is another separate application.
 
 When you book a ride in Uber, it shows you the map, your route, and nearby drivers but Uber didn't create the map itself.
