@@ -12,7 +12,7 @@ Django MVT (Model–View–Template) ವಿನ್ಯಾಸ ಮಾದರಿಯನ
 
 Example Use Cases : Blogs, eCommerce websites, APIs and admin dashboards...
 
-### **Django Versions**
+### **Django Versions**    
 
 You can check Django versions here: https://www.djangoproject.com/download/
 
