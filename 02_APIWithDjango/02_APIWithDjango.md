@@ -1,4 +1,4 @@
-# Django  
+# Django     
 
 Django is a high-level Python web framework used to build web applications.   
 
