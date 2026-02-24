@@ -1,4 +1,4 @@
-# Pagination
+# Pagination  
 
 Pagination is the process of splitting large data into smaller parts (pages) instead of sending everything at once to the client.
 It helps improve performance, response time, and memory usage.
