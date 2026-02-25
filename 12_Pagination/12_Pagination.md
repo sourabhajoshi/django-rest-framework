@@ -4,7 +4,7 @@ Pagination is the process of splitting large data into smaller parts (pages) ins
 It helps improve performance, response time, and memory usage.
 
 Pagination ಅಂದರೆ ದೊಡ್ಡ data ಅನ್ನು ಪುಟಗಳಾಗಿ (pages ಆಗಿ) ಹಂಚಿ client ಗೆ ಕಳುಹಿಸುವುದು.
-ಇದರಿಂದ server ಮೇಲೆ load ಕಡಿಮೆ ಆಗುತ್ತದೆ ಮತ್ತು response ವೇಗವಾಗಿರುತ್ತದೆ.
+ಇದರಿಂದ server ಮೇಲೆ load ಕಡಿಮೆ ಆಗುತ್ತದೆ ಮತ್ತು response ವೇಗವಾಗಿರುತ್ತದೆ.  
 
 For example:
 - If you have 1000 books in your DB, you don’t want to send all 1000 at once.
