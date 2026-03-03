@@ -32,7 +32,7 @@ python manage.py startapp movies
 
 Step 4: Install Django REST Framework
 ```
-pip install djangorestframework
+pip install djangorestframework   
 ```
 
 Step 5: Add 'rest_framework' to INSTALLED_APPS in settings.py
