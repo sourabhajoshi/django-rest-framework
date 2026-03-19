@@ -2,7 +2,7 @@
 
 Django is a high-level Python web framework used to build web applications.   
 
-It provides a clean structure, reusable components, and comes with many built-in features like authentication, admin panel, ORM, and URL routing.
+It provides a clean structure, reusable components, and comes with many built-in features like authentication, admin panel, ORM, and URL routing.    
 
 Django follows the MVT (Model–View–Template) architectural pattern and helps developers create secure, scalable, and maintainable applications.
 
