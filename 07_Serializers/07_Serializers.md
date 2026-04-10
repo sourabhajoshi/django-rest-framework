@@ -1,6 +1,6 @@
 # Module Serializer in DRF
 
-**What is Serializer?**
+**What is Serializer?**   
 
 Manual way to define serialization logic. You define each field explicitly. Use when you're not using Django models or want full control.
 ```
