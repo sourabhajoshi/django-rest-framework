@@ -7,7 +7,7 @@ OR
 
 API stands for Application Programming Interface, a set of rules that allows two software systems to communicate and share data with each other.
 
-API ಎಂದರೆ Application Programming Interface, ಇದು ಎರಡು ಸಾಫ್ಟ್‌ವೇರ್‌ಗಳು ಪರಸ್ಪರ ಮಾಹಿತಿ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳಲು ಬಳಕೆಯಾಗುವ ನಿಯಮಗಳು ಮತ್ತು ಸೇತುವೆ.
+API ಎಂದರೆ Application Programming Interface, ಇದು ಎರಡು ಸಾಫ್ಟ್‌ವೇರ್‌ಗಳು ಪರಸ್ಪರ ಮಾಹಿತಿ ವಿನಿಮಯ ಮಾಡಿಕೊಳ್ಳಲು ಬಳಕೆಯಾಗುವ ನಿಯಮಗಳು ಮತ್ತು ಸೇತುವೆ.  
 
 API is a bridge that lets one app use features of another app without building them from scratch.
 
