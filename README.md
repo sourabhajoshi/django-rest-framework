@@ -23,7 +23,7 @@ Welcome to the DRF (Django REST Framework) Learning Repository. This repo contai
 15. [16 - JWT Authentication](./16_JWTAuthentication)
 16. [17 - Throttling](./17_Throttling)
 17. [18 - Unit Testing](./18_UnitTesting)
-18. [DRF Projects](./DRF-Projects)
+18. [DRF Projects](./DRF-Projects)    
 
 ---   
 ### Contributions    
